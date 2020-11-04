@@ -152,8 +152,8 @@ type CommitUploadBody struct {
 }
 
 type Function struct {
-	Name  string
-	Input interface{}
+	Name  string      `json:"Name"`
+	Input interface{} `json:"Input,,omitempty"`
 }
 
 type SnapshotInput struct {

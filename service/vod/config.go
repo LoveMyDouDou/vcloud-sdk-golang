@@ -61,7 +61,7 @@ var (
 		base.RegionCnNorth1: {
 			Timeout: 5 * time.Second,
 			//Host:    "vod.bytedanceapi.com",
-			Host:    "staging-openapi-boe.byted.org",
+			Host: "staging-openapi-boe.byted.org",
 			Header: http.Header{
 				"Accept": []string{"application/json"},
 			},
@@ -127,12 +127,36 @@ var (
 				"Version": []string{"2020-08-01"},
 			},
 		},
+		"QueryUploadTaskInfo": {
+			Method: http.MethodGet,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"QueryUploadTaskInfo"},
+				"Version": []string{"2020-08-01"},
+			},
+		},
 		"UploadMediaByUrl": {
 			Method: http.MethodGet,
 			Path:   "/",
 			Query: url.Values{
 				"Action":  []string{"UploadMediaByUrl"},
-				"Version": []string{"2018-01-01"},
+				"Version": []string{"2020-08-01"},
+			},
+		},
+		"ApplyUploadInfo": {
+			Method: http.MethodGet,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"ApplyUploadInfo"},
+				"Version": []string{"2020-08-01"},
+			},
+		},
+		"CommitUploadInfo": {
+			Method: http.MethodPost,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"CommitUploadInfo"},
+				"Version": []string{"2020-08-01"},
 			},
 		},
 		"ApplyUpload": {
