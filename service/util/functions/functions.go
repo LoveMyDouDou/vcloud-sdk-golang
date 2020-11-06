@@ -23,3 +23,10 @@ func StartWorkflowFunc(templateId string) vod.Function {
 		Input: vod.WorkflowInput{TemplateId: templateId},
 	}
 }
+
+func EncryptionFunc(encryption vod.EntryptionInput) vod.Function {
+	return vod.Function{
+		Name:  "Encryption",
+		Input: encryption,
+	}
+}

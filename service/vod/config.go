@@ -63,7 +63,8 @@ var (
 			//Host:    "vod.bytedanceapi.com",
 			Host: "staging-openapi-boe.byted.org",
 			Header: http.Header{
-				"Accept": []string{"application/json"},
+				"Accept":   []string{"application/json"},
+				"X-TT-ENV": []string{"boe_husky_feature"},
 			},
 			Credentials: base.Credentials{Region: base.RegionCnNorth1, Service: "vod"},
 		},
@@ -152,7 +153,7 @@ var (
 			},
 		},
 		"CommitUploadInfo": {
-			Method: http.MethodPost,
+			Method: http.MethodGet,
 			Path:   "/",
 			Query: url.Values{
 				"Action":  []string{"CommitUploadInfo"},
